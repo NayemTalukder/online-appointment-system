@@ -1,0 +1,57 @@
+// variables
+$primary-color: #28a745;
+$primary-color-2: #877502;
+$secondary-color: #0f0f0f;
+$tertiary-color: #ffffff;
+
+// fonts
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap');
+
+// Extend/Inheritance
+%center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%top-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+// Main Styles
+.main-menu {
+  @extend %top-fixed;
+  height: 10.5vh;
+  display: flex;
+  align-items: center;
+
+  ul > li {
+    display: inline-block;
+    margin-right: 2vw;
+    zoom:1;
+    *display: inline;
+    
+    a {
+      text-decoration: none;
+      color: $tertiary-color;
+      font-size: 1.2vw;
+      font-family: 'Akaya Telivigala', cursive;
+
+      @media only screen and (max-width: 599.99px) {
+        font-size: 1.8vw;
+      }
+
+      @media only screen and (min-width: 600px) and (max-width: 900px) {
+        font-size: 1.5vw;
+      }
+    }
+    
+    a.active, a:hover { 
+      color: $secondary-color
+    }
+  }
+
+}

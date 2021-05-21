@@ -1,0 +1,388 @@
+// variables
+$primary-color: #28a745;
+$primary-color-2: #877502;
+$secondary-color: #0f0f0f;
+$secondary-color-opacity: #0f0f0fe6;
+$tertiary-color: #ffffff;
+
+// Extend/Inheritance
+%center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%my-0_5 {
+  margin-top: .5vw !important;
+  margin-bottom: .5vw !important;
+}
+
+// Grid
+.container {
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+
+.container-fluid {
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
+
+.container-y {
+  margin-top: 10.5vh !important;
+  margin-bottom: 5.5vh !important;
+}
+
+.row > * {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  padding-right: calc(var(--bs-gutter-x) / 2);
+  padding-left: calc(var(--bs-gutter-x) / 2);
+  margin-top: var(--bs-gutter-y);
+}
+
+.col {
+  flex: 1 0 0%;
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+.d-block-599 {
+  @media only screen and (max-width: 599px) {
+    display: block !important;
+  }
+}
+
+.d-block-500 {
+  @media only screen and (max-width: 500px) {
+    display: block !important;
+  }
+}
+
+.d-none {
+  display: none !important;
+}
+
+// core
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.align-items-center {
+  align-items: center i !important;
+}
+
+.active {
+  color: $secondary-color !important;
+}
+
+.link {
+  cursor: pointer;
+  text-decoration: none !important;
+  
+  &:hover {
+    color: $secondary-color;
+    background-color: $primary-color;
+  }
+}
+
+.link-inverse {
+  cursor: pointer;
+  text-decoration: none !important;
+  
+  &:hover {
+    color: $secondary-color;
+    background-color: $primary-color-2;
+  }
+}
+
+.link-secondary {
+  cursor: pointer;
+  text-decoration: none !important;
+  
+  &:hover {
+    color: $secondary-color;
+    background-color: $primary-color-2;
+  }
+}
+
+// Text
+.text-center {
+  text-align: center !important;
+}
+
+.text-white {
+  color: $tertiary-color;
+}
+
+.text-dark {
+  color: $secondary-color;
+}
+
+// Width
+.w-100 {
+  width: 100% !important;
+}
+.w-80 {
+  width: 80% !important;
+}
+.w-60 {
+  width: 60% !important;
+}
+.w-50 {
+  width: 50% !important;
+}
+.w-40 {
+  width: 40% !important;
+}
+
+// Height
+.h-35 {
+  height: 35vh !important;
+}
+.h-100 {
+  min-height: 100vh !important;
+}
+
+// Margin
+.mx-auto {
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+.my-auto {
+  margin-top: auto !important;
+  margin-bottom: auto !important;
+}
+.my-1 {
+  margin-top: 1vw !important;
+  margin-bottom: 1vw !important;
+}
+.my-2 {
+  margin-top: 2vw !important;
+  margin-bottom: 2vw !important;
+}
+.ml-1 {
+  margin-left: 1vw !important;
+}
+.ml-2 {
+  margin-left: 2vw !important;
+}
+.mr_2 {
+  margin-right: .2vw !important;
+}
+.mr-1 {
+  margin-right: 1vw !important;
+}
+.mr-2 {
+  margin-right: 2vw !important;
+}
+.mt-1 {
+  margin-top: 1vw !important;
+}
+.mt-2 {
+  margin-top: 2vw !important;
+}
+.mb-1 {
+  margin-bottom: 1vw !important;
+}
+.mb-2 {
+  margin-bottom: 2vw !important;
+}
+
+// Padding
+.py-2 {
+  padding-top: 2vw !important;
+  padding-bottom: 2vw !important;
+}
+
+// Font
+.font-family-1 {
+  font-family: 'Akaya Telivigala', cursive;
+}
+
+.font-1 {
+  font-size: 1vw;
+
+  @media only screen and (max-width: 599.99px) {
+    font-size: 2vw;
+  }
+
+  @media only screen and (min-width: 600px) and (max-width: 900px) {
+    font-size: 1.5vw;
+  }
+}
+
+.font-2 {
+  font-size: 2vw;
+
+  @media only screen and (max-width: 599.99px) {
+    font-size: 3.5vw;
+  }
+
+  @media only screen and (min-width: 600px) and (max-width: 900px) {
+    font-size: 3vw;
+  }
+}
+
+// Color
+.co-p {
+  color: $primary-color;
+}
+
+.co-s {
+  color: $secondary-color;
+}
+
+// Color Background
+.bg-p {
+  background-color: $primary-color;
+}
+
+.bg-p-2 {
+  background-color: $primary-color-2;
+}
+
+.bg-s {
+  background-color: $secondary-color;
+}
+
+.bg-t {
+  background-color: $tertiary-color;
+}
+
+// Form
+.form-control {
+  @extend %my-0_5;
+  // display: block;
+  width: 98%;
+  // padding: .375rem .75rem;
+  padding: .375rem 1%;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: $tertiary-color;
+  background-color: $secondary-color;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus {
+  color: $secondary-color;
+  background-color: $tertiary-color;
+  border-color: #86b7fe;
+  outline: 0;
+  box-shadow: 0 0 0 0.15rem rgba(13, 110, 253, 0.25);
+}
+
+select {
+  width: 100% !important;
+}
+
+// label {
+//   background-color: #28a745;
+//   color: white !important;
+//   padding: 0.4vw;
+//   padding-left: 1vw;
+//   padding-right: 1vw;
+//   border-radius: 2px;
+// }
+
+// Table
+.table {
+  // @extend %center;
+  height: 100vh;
+  color: $tertiary-color;
+  // background-color: #0000007d;
+  
+  th {
+    background-color: $secondary-color;
+    padding: 1vw;
+    color: $tertiary-color;
+  }
+
+  td {
+    background-color: $secondary-color-opacity;
+    padding: 1vw;
+
+    a {
+      text-decoration: none;
+      color: $tertiary-color;
+    }
+
+    a:hover {
+      color: $primary-color;
+    }
+  }
+}
+
+
+// Button
+.btn {
+	display: inline-block;
+	font-weight: 400;
+	color: #212529;
+	text-align: center;
+	vertical-align: middle;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	background-color: transparent;
+	border: 1px solid transparent;
+	padding: .375rem .75rem;
+	font-size: 1rem;
+	line-height: 1.5;
+	border-radius: .25rem;
+	transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out
+}
+
+@media (prefers-reduced-motion:reduce) {
+	.btn {
+		transition: none
+	}
+}
+
+.btn-primary {
+  color: $tertiary-color;
+  background-color: $primary-color;
+  border-color: $primary-color;
+
+  &:hover {
+    background-color: $secondary-color;
+    border-color: $secondary-color;
+  }
+}
+
+.btn-secondary {
+  color: $tertiary-color;
+  background-color: $primary-color-2;
+  border-color: $primary-color-2;
+
+  &:hover {
+    background-color: $secondary-color;
+    border-color: $secondary-color;
+  }
+}
+
+.btn-inverse {
+  color: $tertiary-color;
+  background-color: $secondary-color;
+  border-color: $secondary-color;
+  
+  &:hover {
+    color: $primary-color-2 !important;
+    background-color: $secondary-color;
+    border-color: $secondary-color;
+    opacity: .8;
+  }
+}
